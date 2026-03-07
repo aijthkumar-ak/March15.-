@@ -1,4 +1,4 @@
-<>
+<!..>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -60,11 +60,11 @@
 <body>
 
 <!-- Photo -->
-<img src="https://drive.google.com/file/d/1ZQ2W93KGQmNshh_ZmEihajP5fHaD8oJ4/view?usp=drivesdk" alt="Birthday Photo" class="birthday-photo">
+<img src="your-photo.jpg" alt="Birthday Photo" class="birthday-photo">
 
 <!-- Message -->
-<h1> many More Happy Birthday Sowmiii!</h1>
-<p>Wishing you a day full of love, joy, and surprises, And This Project in Large time Spend ,so thet Arrkadu Briyani Vangi Kodu!</p>
+<h1>Happy Birthday Sowmiii!</h1>
+<p>Wishing you a day full of love, joy, and surprises, And this Project Very Large Time So Thet Briyani Vangi Kodu!</p>
 
 </body>
 </html>
