@@ -1,4 +1,4 @@
-<!Ajith>
+<>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -60,7 +60,7 @@
 <body>
 
 <!-- Photo -->
-<img src="your-https://drive.google.com/file/d/1ZQ2W93KGQmNshh_ZmEihajP5fHaD8oJ4/view?usp=drivesdk.jpg" alt="Birthday Photo" class="birthday-photo">
+<img src="https://drive.google.com/file/d/1ZQ2W93KGQmNshh_ZmEihajP5fHaD8oJ4/view?usp=drivesdk" alt="Birthday Photo" class="birthday-photo">
 
 <!-- Message -->
 <h1>Happy Birthday!</h1>
