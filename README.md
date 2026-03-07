@@ -1,127 +1,70 @@
-<!DOCTYPE html>
+<!Ajith>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Birthday Wishes on Photo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday!</title>
 <style>
+  /* Full-screen background */
   body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-
-  /* Container with background image (your photo) */
-  .container {
-    position: relative;
+    padding: 0;
     width: 100%;
-    height: 100vh; /* Full viewport height */
-    background-image: url('your-photo.jpg'); /* Replace with your photo URL or path */
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* Overlay for message and button */
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    background: rgba(0, 0, 0, 0.3); /* Optional: dark overlay for better text visibility */
-  }
-
-  /* Top message styling */
-  .top {
+    flex-direction: column;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
     text-align: center;
-    color: white;
-    margin-top: 40px;
   }
 
-  .top h1 {
-    font-size: 2em;
+  /* Birthday photo */
+  .birthday-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
     margin-bottom: 20px;
   }
 
-  /* Bottom button container */
-  .bottom {
-    width: 100%;
-    position: relative;
-    height: 100px;
+  /* Message styling */
+  h1 {
+    color: #ff4081;
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px #fff;
+    animation: fadeIn 2s ease-in-out forwards;
+    opacity: 0;
   }
 
-  /* Thanks button styles */
-  #thanksBtn {
-    position: absolute;
-    padding: 12px 24px;
-    font-size: 1.2em;
-    background-color: #ff7043;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    top: 50%;
-    transform: translateY(-50%);
+  p {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-shadow: 1px 1px #0003;
+    animation: fadeIn 3s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    to { opacity: 1; }
   }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="overlay">
-    <!-- Top message -->
-    <div class="top" id="birthdayMessage">
-      <!-- Dynamic message will be inserted here -->
-    </div>
-    <!-- Bottom moving button -->
-    <div class="bottom">
-      <button id="thanksBtn">Thanks</button>
-    </div>
-  </div>
-</div>
+<!-- Photo -->
+<img src="your-https://drive.google.com/file/d/1ZQ2W93KGQmNshh_ZmEihajP5fHaD8oJ4/view?usp=drivesdk.jpg" alt="Birthday Photo" class="birthday-photo">
 
-<script>
-  // Set user's name
-  const userName = "Sowmiiii"; // Change as needed
-  const messageDiv = document.getElementById('birthdayMessage');
-  messageDiv.innerHTML = `<h1>Happy Birthday, ${userName}! 🎉🎂🎈</h1>
-                          <p>Wishing you a fantastic year ahead filled with adventure and joy!</p>`;
-
-  const btn = document.getElementById('thanksBtn');
-
-  // Function to automatically move the button left and right
-  let direction = 1; // 1 for right, -1 for left
-  function moveButton() {
-    const parentWidth = document.querySelector('.bottom').clientWidth;
-    const btnWidth = btn.offsetWidth;
-    let currentX = btn.offsetLeft;
-
-    if (currentX + btnWidth >= parentWidth) {
-      direction = -1;
-    } else if (currentX <= 0) {
-      direction = 1;
-    }
-
-    btn.style.left = (currentX + direction * 5) + 'px';
-
-    requestAnimationFrame(moveButton);
-  }
-
-  // Start the movement
-  moveButton();
-
-  // Center the button on click
-  btn.addEventListener('click', () => {
-    const parentWidth = document.querySelector('.bottom').clientWidth;
-    const btnWidth = btn.offsetWidth;
-    btn.style.left = (parentWidth / 2 - btnWidth / 2) + 'px';
-  });
-</script>
+<!-- Message -->
+<h1>Happy Birthday!</h1>
+<p>Wishing you a day full of love, joy, and surprises!</p>
 
 </body>
 </html>
