@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    margin: 0;
+    margin: 30;
     font-family: Arial, sans-serif;
   }
   #top {
@@ -23,7 +23,7 @@
     text-align: center;
     padding: 20px;
     font-size: 20px;
-    background-color:Red;
+    background-color🤸‍♂️;
   }
 </style>
 </head>
@@ -34,7 +34,7 @@
 </div>
 
 <div id="bottom">
-  !
+  Happiest Day sowmi
 </div>
 
 <script>
