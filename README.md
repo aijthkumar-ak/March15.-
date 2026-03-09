@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+1<.>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -118,11 +118,11 @@
 </div>
 
 <!-- Wishes message -->
-<div id="wishes">Happy Birthday! Wishing you a wonderful day!</div>
+<div id="wishes">Happy Birthday! Wishing you a wonderful day Broww!</div>
 
 <!-- Bottom moving "Thanks" box -->
 <div id="bottom-box">
-  <div id="thanks-text">Sowmiya </div>
+  <div id="thanks-text">Mari muthu</div>
 </div>
 
 </body>
