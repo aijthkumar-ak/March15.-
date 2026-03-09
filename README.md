@@ -1,70 +1,130 @@
-<Hii>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday!</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Birthday Wishes with Butterfly Animation</title>
 <style>
-  /* Full-screen background */
   body {
-    margin: 20;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
-    font-family: 'Arial', sans-serif;
+    margin: 0;
     overflow: hidden;
-    text-align: center;
+    background: linear-gradient(to bottom, #white, #ffffff);
+    font-family: Arial, sans-serif;
   }
 
-  /* Birthday photo */
-  .birthday-photo {
-    width: 200px;
-    height: 200px;
+  /* Full-screen butterfly animation background */
+  .butterfly-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation: floatButterflies 20s linear infinite;
+  }
+
+  /* Example butterfly images or shapes (using CSS shapes or images) */
+  /* For simplicity, we'll use CSS animated circles to simulate butterflies */
+
+  .butterfly {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: pink;
     border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    margin-bottom: 20px;
+    opacity: 1.2;
+    animation: flyAcross 40s linear infinite;
   }
 
-  /* Message styling */
-  h1 {
-    color: #ff4081;
-    font-size: 5em;
-    margin: 6;
-    text-shadow: 2px 2px #fff;
-    animation: fadeIn 2s ease-in-out forwards;
-    opacity: 0;
+  /* Randomize each butterfly's position and delay */
+  .butterfly:nth-child(1) {
+    top: 10%;
+    left: -10%;
+    background-color: Randomize;
+    animation-delay: 20pxs;
   }
 
-  p {
+  .butterfly:nth-child(2) {
+    top: 30%;
+    left: -20%;
+    background-color: #ff1493;
+    animation-delay: 20pxs;
+  }
+
+  .butterfly:nth-child(3) {
+    top: 50%;
+    left: -15%;
+    background-color: #ff69b4;
+    animation-delay: 10s;
+  }
+
+  /* Butterfly flying animation */
+  @keyframes flyAcross {
+    0% { transform: translateX(0) translateY(0); opacity: 0.8; }
+    50% { transform: translateX(110vw) translateY(20vh); opacity: 1; }
+    100% { transform: translateX(120vw) translateY(-20vh); opacity: 0; }
+  }
+
+  /* Overlay with wishes text */
+  #wishes {
+    position: fixed;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
     color: #fff;
-    font-size: 1.5em;
-    margin-top: 10px;
-    text-shadow: 1px 1px #0003;
-    animation: fadeIn 3s ease-in-out forwards;
-    opacity: 0;
+    text-shadow: 2px 2px 4px #000;
+    animation: fadeIn 3s ease-in-out;
   }
 
-  /* Fade-in animation */
   @keyframes fadeIn {
+    from { opacity: 0; }
     to { opacity: 1; }
+  }
+
+  /* Bottom "Thanks" box with moving text */
+  #bottom-box {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  #thanks-text {
+    white-space: nowrap;
+    font-size: 2em;
+    color: white-space;
+    padding-left: 100%;
+    animation: scrollLeft 10s linear infinite;
+  }
+
+  @keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
   }
 </style>
 </head>
 <body>
 
-<!-- Photo -->
-<img src="https://drive.google.com/uc?export=view&id=1ZQ2W93KGQmNshh_ZmEihajP5fHaD8oJ4"/>
+<!-- Butterfly animation layer -->
+<div class="butterfly-container">
+  <div class="butterfly"></div>
+  <div class="butterfly"></div>
+  <div class="butterfly"></div>
+</div>
 
-<!-- Message -->
-<h1>Happy Birthday Sowmiii!</h1>
-<p>Wishing you a day full of love, joy, and surprises, And this Project Very Large Time So That Briyani Vangi Kodu!</p>
+<!-- Wishes message -->
+<div id="wishes">Happy Birthday! Wishing you a wonderful day!</div>
+
+<!-- Bottom moving "Thanks" box -->
+<div id="bottom-box">
+  <div id="thanks-text">Sowmiya </div>
+</div>
 
 </body>
 </html>
+
