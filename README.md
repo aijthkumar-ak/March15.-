@@ -1,87 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Happy Birthday Animation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Love Animation</title>
+
 <style>
-  /* Reset and full layout */
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: yellow;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-  }
 
-  /* Animated "Happy Birthday" text at top */
-  .happy-birthday {
-    font-size: 2em;
-    color: black;
-    animation: bounce 4s infinite alternate;
-    margin-top: 20px;
-  }
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  background:#fff0f5;
+  font-family:Arial, sans-serif;
+  text-align:center;
+}
 
-  /* Center area for any other content if needed */
-  .center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+/* Top Birthday Text */
+.top-text{
+  font-size:40px;
+  color:#ff1493;
+  margin-top:20px;
+  font-weight:bold;
+}
 
-  /* Butterfly at bottom */
-  .butterfly {
-    font-size: 9em;
-    /* Optional: add some animation to the butterfly */
-    animation: flutter 3s infinite alternate ease-in-out;
-  }
+/* Heart Animation */
+.heart{
+  position:relative;
+  width:100px;
+  height:100px;
+  background:red;
+  transform:rotate(-45deg);
+  animation:pulse 1.5s infinite;
+}
 
-  /* Moving "Thanks" text at bottom, moving up and down */
-  .thanks {
-    font-size: 7em;
-    color: red;
-    animation: moveUpDown 2s infinite ease-in-out;
-    margin-bottom: 20px;
-  }
+.heart:before,
+.heart:after{
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100px;
+  background:red;
+  border-radius:50%;
+}
 
-  /* Animations */
+.heart:before{
+  top:-50px;
+  left:0;
+}
 
-  @keyframes bounce {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-  }
+.heart:after{
+  left:50px;
+  top:0;
+}
 
-  @keyframes moveUpDown {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
-  }
+/* Pulse Animation */
+@keyframes pulse{
+  0%,100%{ transform:rotate(-45deg) scale(1); }
+  50%{ transform:rotate(-45deg) scale(1.2); }
+}
 
-  @keyframes flutter {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(10deg); }
-    100% { transform: rotate(-10deg); }
-  }
+/* Bottom Moving Message Box */
+.message-box{
+  background:white;
+  padding:15px 30px;
+  border-radius:20px;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+  margin-bottom:40px;
+  font-size:20px;
+  color:#ff1493;
+  animation:moveMsg 2s infinite alternate;
+}
+
+/* Move up and down */
+@keyframes moveMsg{
+  from{ transform:translateY(0); }
+  to{ transform:translateY(-20px); }
+}
+
 </style>
 </head>
+
 <body>
 
-  <!-- Top animated "Happy Birthday" -->
-  <div class="happy-birthday ">May your birthday ignite the spark of ambition and determination in you</div>
+<div class="top-text">🎉 Happy Birthday 🎉</div>
 
-  <!-- Optional center content -->
-  <div class="center"></div>
+<div class="heart"></div>
 
-  <!-- Bottom butterfly -->
-  <div class="butterfly">🦋</div>
-
-  <!-- "Thanks" moving up and down -->
-  <div class="thanks">Sowmii</div>
+<div class="message-box">Hi 💖</div>
 
 </body>
 </html>
